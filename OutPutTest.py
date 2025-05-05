@@ -7,8 +7,8 @@ def transpilar_python_a_js(codigo_python):
     # Convertir print a console.log  
     codigo_js = re.sub(r'print\((.*?)\)', r'console.log(\1);', codigo_js)  
 
-    # Agregar llaves de cierre  
-    codigo_js = re.sub(r'\n\s{4}', '\n}', codigo_js, count=1)  # Cierre básico  
+    # Agregar llaves de cierre  y quita los espacios en blanco
+    codigo_js = codigo_js.strip() + '\n}'
 
     return codigo_js  
 
