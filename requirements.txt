@@ -1,0 +1,13 @@
+# ANTLR4 runtime for Python
+antlr4-python3-runtime==4.13.2
+
+# Testing dependencies
+pytest==7.4.0
+
+# Development tools
+black==23.7.0
+flake8==6.1.0
+
+# Other useful libraries for the transpiler
+jinja2==3.1.2  # For templates if needed in JS code generation
+
