@@ -1,7 +1,7 @@
 # Generated from Python3Parser.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
-    from .Python3Parser import Python3Parser
+    from Python3Parser import Python3Parser
 else:
     from Python3Parser import Python3Parser
 
