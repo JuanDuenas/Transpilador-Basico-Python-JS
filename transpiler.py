@@ -13,4 +13,4 @@ tokens = CommonTokenStream(lexer)
 parser = Python3Parser(tokens)
 # * Cada llamada a una regla (aquí file_input()) devuelve un objeto ParserRuleContext que es la raíz del parse tree
 # * inicia parseo desde file_input 
-tree = parser.file_input() # pylint: disable=no-member
+tree = parser.file_input()

@@ -1,12 +1,21 @@
 # Generated from Python3Parser.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
-    from Python3Parser import Python3Parser
+    from .Python3Parser import Python3Parser
 else:
     from Python3Parser import Python3Parser
 
 # This class defines a complete listener for a parse tree produced by Python3Parser.
 class Python3ParserListener(ParseTreeListener):
+
+    # Enter a parse tree produced by Python3Parser#file_input.
+    def enterFile_input(self, ctx:Python3Parser.File_inputContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#file_input.
+    def exitFile_input(self, ctx:Python3Parser.File_inputContext):
+        pass
+
 
     # Enter a parse tree produced by Python3Parser#funcdef.
     def enterFuncdef(self, ctx:Python3Parser.FuncdefContext):

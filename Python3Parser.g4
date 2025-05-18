@@ -4,6 +4,10 @@ options {
     tokenVocab = Python3Lexer;
 }
 
+// nueva regla raíz:
+file_input
+    : (funcdef | if_stmt | simple_stmt)* EOF
+    ;
 funcdef
     : 'def' NAME parameters ':' suite
     ;
