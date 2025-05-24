@@ -23,16 +23,31 @@ def parse(source_file):
 def main():
     cli = argparse.ArgumentParser(description="Transpiler Python → JS")
     cli.add_argument("source", help="Archivo .py de entrada")
+    cli.add_argument("-o", "--output", help="Archivo .js de salida (opcional)")
     args = cli.parse_args()
 
     try:
         tree = parse(args.source)
         run_listener(tree)
         result = run_visitor(tree)
-        print("Visitor devolvió:", result[0])
+        
+        # Mejorar el output
+        js_code = result if isinstance(result, str) else str(result)
+        print("=== CÓDIGO JAVASCRIPT GENERADO ===")
+        print(js_code)
+        
+        # Guardar en archivo si se especifica
+        if args.output:
+            with open(args.output, 'w', encoding='utf-8') as f:
+                f.write(js_code)
+            print(f"\n✅ Guardado en: {args.output}")
+            
     except TranspileSyntaxError as e:
-        print(f"Error de sintaxis: {e}")
-        # sys.exit(1)  # si quieres terminar con código de error
+        print(f"❌ Error de sintaxis: {e}")
+    except Exception as e:
+        print(f"❌ Error inesperado: {e}")
+        import traceback
+        traceback.print_exc()
 
 
 if __name__ == "__main__":

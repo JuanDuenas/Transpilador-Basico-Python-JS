@@ -38,6 +38,10 @@ LPAREN: '(';
 RPAREN: ')';
 COLON: ':';
 COMMA: ',';
+LBRACKET: '[';
+RBRACKET: ']';
+LBRACE: '{';
+RBRACE: '}';
 
 // Whitespace and comments
 NEWLINE: ('\r'? '\n' | '\r')+ -> channel(HIDDEN);

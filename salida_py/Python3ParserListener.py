@@ -215,6 +215,42 @@ class Python3ParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by Python3Parser#list_literal.
+    def enterList_literal(self, ctx:Python3Parser.List_literalContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#list_literal.
+    def exitList_literal(self, ctx:Python3Parser.List_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#dict_literal.
+    def enterDict_literal(self, ctx:Python3Parser.Dict_literalContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#dict_literal.
+    def exitDict_literal(self, ctx:Python3Parser.Dict_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#dict_pairs.
+    def enterDict_pairs(self, ctx:Python3Parser.Dict_pairsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#dict_pairs.
+    def exitDict_pairs(self, ctx:Python3Parser.Dict_pairsContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#dict_pair.
+    def enterDict_pair(self, ctx:Python3Parser.Dict_pairContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#dict_pair.
+    def exitDict_pair(self, ctx:Python3Parser.Dict_pairContext):
+        pass
+
+
     # Enter a parse tree produced by Python3Parser#testlist.
     def enterTestlist(self, ctx:Python3Parser.TestlistContext):
         pass

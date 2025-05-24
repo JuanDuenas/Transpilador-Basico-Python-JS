@@ -105,8 +105,25 @@ atom
     | NUMBER 
     | STRING 
     | '(' test ')'
+    | list_literal
+    | dict_literal
     ;
 
+list_literal
+    : '[' (testlist)? ']'
+    ;
+
+dict_literal
+    : '{' (dict_pairs)? '}'
+    ;
+
+dict_pairs
+    : dict_pair (',' dict_pair)* (',')?
+    ;
+
+dict_pair
+    : test ':' test
+    ;
 testlist
     : test (',' test)* (',')?
     ;

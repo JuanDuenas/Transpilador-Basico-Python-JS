@@ -124,6 +124,26 @@ class Python3ParserVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by Python3Parser#list_literal.
+    def visitList_literal(self, ctx:Python3Parser.List_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by Python3Parser#dict_literal.
+    def visitDict_literal(self, ctx:Python3Parser.Dict_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by Python3Parser#dict_pairs.
+    def visitDict_pairs(self, ctx:Python3Parser.Dict_pairsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by Python3Parser#dict_pair.
+    def visitDict_pair(self, ctx:Python3Parser.Dict_pairContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by Python3Parser#testlist.
     def visitTestlist(self, ctx:Python3Parser.TestlistContext):
         return self.visitChildren(ctx)
